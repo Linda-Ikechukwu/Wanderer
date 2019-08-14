@@ -1,0 +1,26 @@
+{
+  "name": "wanderer",
+  "version": "1.0.0",
+  "description": "\"\"\u001b[DSample Landing page for a travel agency\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[\u001b[CTravel agency\"",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/styles.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u0016https://github.com/Linda-Ikechukwu/Wanderer"
+  },
+  "keywords": [
+    "\"Landing",
+    "Page\"",
+    "\"\"\u001b[DLinda",
+    "Ikechukwu\"",
+    "\"travel",
+    "Agency\""
+  ],
+  "author": "\"Linda Ikechukwu\"",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
