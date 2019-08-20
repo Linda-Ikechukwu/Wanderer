@@ -1,0 +1,30 @@
+.intro-section{
+    background-color: $background-color-grey;
+    padding: 20rem 0;
+    padding-top: 20rem;
+    margin-top: -15vh;
+}
+
+.features-section{
+    padding:20rem 0;
+    margin-top: -15vh;
+    background: linear-gradient(to right bottom, 
+    rgba($color-primary, 0.8),rgba($color-primary-dark, 0.8)),
+    url("../media/images/city-by-the-sea.jpg");
+    background-size: cover;
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+}
+
+.tours-section{
+    background-color: $background-color-grey;
+    padding: 20rem 0;
+    padding-bottom: 5rem;
+    margin-top: -15vh;
+
+}
+
+.stories-section{
+    width: 100%;
+    padding: 15rem 0;
+    position:relative;
+}

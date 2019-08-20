@@ -6,7 +6,8 @@
   box-sizing: inherit; }
 
 html {
-  font-size: 62.55%; }
+  font-size: 62.55%;
+  max-width: 100vw; }
 
 body {
   box-sizing: border-box; }
@@ -46,15 +47,70 @@ body {
   color: #777777;
   padding: 2rem; }
 
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden; }
+  .heading-primary--main {
+    display: block;
+    font-size: 5rem;
+    font-weight: 400;
+    letter-spacing: 2rem;
+    animation: moveInLeft 3s ease-out; }
+  .heading-primary--tagline {
+    display: block;
+    padding-left: 0;
+    margin-left: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1rem;
+    animation: moveInRight 3s ease-out;
+    margin-bottom: 6rem; }
+
+.heading-secondary {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #6546f0, #50066d);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px; }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
+.u-margin-bottom-meduim {
+  margin-bottom: 3rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-top-huge {
+  margin-bottom: 10rem; }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.4rem 4rem;
   display: inline-block;
   border-radius: 10rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   position: relative;
-  left: 27%;
   transition: all .2s; }
 
 .btn::after {
@@ -66,16 +122,16 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -2;
   transition: all .4s; }
 
 .btn:active {
   transform: translate(-0.1rem);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8); }
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.8); }
 
 .btn:hover {
   transform: translateY(-0.3rem);
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.2); }
   .btn:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
@@ -89,39 +145,298 @@ body {
   .btn--white::after {
     background-color: #fff; }
 
-.heading-primary {
+.btn--purple {
+  background-color: #816be0;
+  color: #fff; }
+  .btn--purple::after {
+    background-color: #816be0; }
+
+.btn-text:link, .btn-text:visited {
+  color: #816be0;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #816be0;
+  padding: 3px;
+  font-size: 1.6rem;
+  transition: all .2s; }
+
+.btn-text:hover {
+  background-color: #816be0;
   color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden; }
-  .heading-primary--main {
-    display: block;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px); }
+
+.btn-text:active {
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  transform: translateY(0); }
+
+.fancy-gallery {
+  position: relative; }
+  .fancy-gallery__photo {
+    width: 55%;
+    height: 30rem;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: .2rem;
+    position: absolute;
+    outline-offset: 2rem;
+    transition: all .2s; }
+    .fancy-gallery__photo--one {
+      left: 0;
+      top: -2rem; }
+    .fancy-gallery__photo--two {
+      right: 0;
+      top: 2rem; }
+    .fancy-gallery__photo--three {
+      left: 20%;
+      top: 10rem; }
+    .fancy-gallery__photo:hover {
+      outline: 1.5rem solid #816be0;
+      transform: scale(1.1) translateY(-0.5rem);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      z-index: 20; }
+  .fancy-gallery:hover .fancy-gallery__photo:not(:hover) {
+    transform: scale(0.9); }
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  border-radius: 2px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  transition: all .2s;
+  text-align: center; }
+  .feature-box__icon.iconworks {
     font-size: 5rem;
-    font-weight: 400;
-    letter-spacing: 2.5rem;
-    animation: moveInLeft 3s ease-out; }
-  .heading-primary--tagline {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.08rem;
-    animation: moveInRight 3s ease-out;
+    background-image: linear-gradient(to right, #6546f0, #50066d);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; }
+  .feature-box:hover {
+    transform: translateY(-1.5rem) scale(1.01); }
+
+.tour-card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 52rem; }
+  .tour-card__side {
+    height: 52rem;
+    transition: all .5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4); }
+    .tour-card__side--front {
+      background-color: #fff; }
+    .tour-card__side--back {
+      transform: rotateY(180deg); }
+      .tour-card__side--back--1 {
+        background: linear-gradient(to right bottom, #e9a58c, #d85c2f); }
+      .tour-card__side--back--2 {
+        background: linear-gradient(to right bottom, #6546f0, #50066d); }
+      .tour-card__side--back--3 {
+        background: linear-gradient(to right bottom, #e75fe7, #720572); }
+  .tour-card:hover .tour-card__side--front {
+    transform: rotateY(-180deg); }
+  .tour-card:hover .tour-card__side--back {
+    transform: rotateY(0); }
+  .tour-card__picture {
+    background-size: cover;
+    background-blend-mode: color;
+    height: 23rem;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); }
+    .tour-card__picture--1 {
+      background-image: linear-gradient(to right bottom, #e9a58c, #d85c2f), url(../media/images/dubai-tour.jpg); }
+    .tour-card__picture--2 {
+      background-image: linear-gradient(to right bottom, #6546f0, #50066d), url(../media/images/kenya-tour.jpg); }
+    .tour-card__picture--3 {
+      background-image: linear-gradient(to right bottom, #e75fe7, #720572), url(../media/images/mauritus-tour.jpg); }
+  .tour-card__heading {
+    color: #fff;
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 65%; }
+  .tour-card__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .tour-card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(233, 165, 140, 0.8), rgba(216, 92, 47, 0.8)); }
+    .tour-card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(101, 70, 240, 0.8), rgba(80, 6, 109, 0.8)); }
+    .tour-card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(231, 95, 231, 0.8), rgba(114, 5, 114, 0.8)); }
+  .tour-card__details {
+    padding: 3rem; }
+    .tour-card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .tour-card__details ul li {
+        text-align: center;
+        font-size: 1.3rem;
+        padding: 1rem;
+        text-transform: capitalize; }
+        .tour-card__details ul li:not(:last-child) {
+          border-bottom: 1px solid #eee; }
+  .tour-card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    text-align: center; }
+  .tour-card__price {
+    text-align: center;
+    color: #fff;
     margin-bottom: 6rem; }
+    .tour-card__price-only {
+      font-size: 1.4rem;
+      text-transform: uppercase; }
+    .tour-card__price-value {
+      font-size: 5rem;
+      font-weight: 100; }
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 3px;
+  padding: 6rem;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+  font-size: 1.6rem;
+  transform: skewX(-12deg);
+  position: relative; }
+  .story__avatar {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    margin-right: 3rem;
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-10px) skewX(12deg); }
+  .story__image {
+    height: 100%;
+    transform: translateX(-5rem) scale(1.2);
+    backface-visibility: hidden;
+    transition: all .5s; }
+  .story__text {
+    transform: skewX(12deg); }
+  .story__caption {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 20%);
+    text-transform: uppercae;
+    font-size: 1.7rem;
+    text-align: center;
+    transition: all .5s;
+    backface-visibility: hidden;
+    color: #fff;
+    opacity: 0;
+    transition: all .5s; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story:hover .story__image {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(70%); }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .2;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
 
 .header {
-  height: 90vh;
+  height: 95vh;
   background: linear-gradient(to right bottom, rgba(101, 70, 240, 0.8), rgba(80, 6, 109, 0.8)), url("../media/images/hero-image.jpg");
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%); }
   .header__logo-box {
     position: absolute;
-    top: -2rem;
-    left: 3rem; }
+    top: 5rem;
+    left: 6rem; }
   .header__logo {
-    height: 20rem;
-    width: 20rem; }
+    font-style: oblique;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #fff;
+    text-transform: capitalize; }
   .header__heading-box {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+.row {
+  max-width: 100rem;
+  margin: 0 auto; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 6rem) / 4) + (2 * 6rem)); }
+
+.intro-section {
+  background-color: #f7f7f7;
+  padding: 20rem 0;
+  padding-top: 20rem;
+  margin-top: -15vh; }
+
+.features-section {
+  padding: 20rem 0;
+  margin-top: -15vh;
+  background: linear-gradient(to right bottom, rgba(101, 70, 240, 0.8), rgba(80, 6, 109, 0.8)), url("../media/images/city-by-the-sea.jpg");
+  background-size: cover;
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%); }
+
+.tours-section {
+  background-color: #f7f7f7;
+  padding: 20rem 0;
+  padding-bottom: 5rem;
+  margin-top: -15vh; }
+
+.stories-section {
+  width: 100%;
+  padding: 15rem 0;
+  position: relative; }
