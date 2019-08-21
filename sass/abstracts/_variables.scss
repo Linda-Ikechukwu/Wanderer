@@ -9,12 +9,17 @@ $color-secondary-dark:rgb(216, 92, 47);
 $color-tertiary-light:rgb(231, 95, 231);
 $color-tertiary-dark:rgb(114, 5, 114);
 
-$text-color-grey: #777777;
+$text-color-grey-1: #777777;
+$text-color-grey-2 : #eeeeee;
+$text-color-grey-3: #999;
 
 $background-color-grey: #f7f7f7;
 
 $color-white: #fff;
 $color-black: #000000;
+
+$footer-background:#333;
+
 
 //GRID
 $grid-width: 100rem;
@@ -25,4 +30,10 @@ $gutter-horizontal: 6rem;
 $default-font-size: 1.6rem;
 
 //DEFAULT BOX SHADOWS
-$default-box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+$box-shadow-1: 0 1.5rem 4rem rgba($color-black, .4);
+
+//SPACING
+$section-padding-1 : 20rem 0;
+$section-padding-2: 15rem 0;
+$negative-section-margin: -17vh;
+

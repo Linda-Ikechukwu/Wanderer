@@ -14,7 +14,7 @@
         backface-visibility: hidden;
         border-radius: 3px;
         overflow: hidden;
-        box-shadow:$default-box-shadow;
+        box-shadow:$box-shadow-1;
 
         &--front{
           background-color: $color-white;
