@@ -6,9 +6,50 @@
     }
 }
 
+/*Hack to vertically and horizontally center stuff*/
+
 @mixin component-center{
     position:absolute;
     top:50%;
     left: 50%;
-    transform: translate(-50%,-50%) 
+    transform: translate(-50%,-50%) ;
+}
+
+//MEDIA QUERIES MANAGER
+
+//BREAKPOINTS
+/*
+0 - 600px :       Phone
+600px - 900px :   Tablet Potrait
+900px - 1200px :  Tablet Landscape
+1200px - 1800px : Laptops (This is our default styling)
+1800px - ~ :      Big desktops
+*/
+
+/*
+Breakpoint Argument names
+- phone
+- portrait-tab
+- landscape-tab
+- big-desktop
+*/
+
+/*ORDER: base > typography > general layout > grid > page layout > components*/
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5em) { @content };
+    }
+    @if $breakpoint == landscape-tab {
+        @media (max-width: 75em) { @content };
+    }
+    @if $breakpoint == portrait-tab {
+        @media (max-width: 56.25em) { @content };
+    }
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) { @content };
+    }
+    
+   
+
 }

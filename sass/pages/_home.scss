@@ -5,13 +5,18 @@
 }
 
 .features-section{
-    padding:20rem 0;
+    padding: $section-padding-1;
     margin-top: $negative-section-margin;
     background: linear-gradient(to right bottom, 
     rgba($color-primary, 0.8),rgba($color-primary-dark, 0.8)),
     url("../media/images/city-by-the-sea.jpg");
     background-size: cover;
     clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+
+    @include responsive(portrait-tab){
+        padding: $section-padding-2;
+        clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);  
+    }
 }
 
 .tours-section{
@@ -19,6 +24,10 @@
     padding:$section-padding-1;
     padding-bottom: 5rem;
     margin-top: $negative-section-margin;
+
+    @include responsive(portrait-tab){
+        padding-bottom: 2rem; 
+    }
 
 }
 
@@ -43,11 +52,31 @@
         background-size: 100%;
         border-radius: 3px;
         box-shadow: $box-shadow-1;
-        height: 50rem;
+
+        @include responsive(landscape-tab){
+            background-image:linear-gradient(105deg, rgba($color-white, .9) 0%,
+                                                     rgba($color-white, .9) 60%,
+                                                     transparent 60%), 
+                                            url(../media/images/tourists.jpg);
+            background-size: cover;                                 
+        }
+        @include responsive(portrait-tab){
+            background-image:linear-gradient(to right, rgba($color-white, .9) 0%,
+                                                     rgba($color-white, .9) 100%), 
+                                            url(../media/images/tourists.jpg);
+        }
 
         &__form{
             width: 50%;
             padding: 6rem;
+
+            @include responsive(landscape-tab){
+                width: 60%;
+            }
+
+            @include responsive(portrait-tab){
+                width: 100%;
+            }
         }
 
     }

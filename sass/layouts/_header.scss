@@ -11,6 +11,10 @@
         position: absolute;
         top:5rem;
         left:6rem; 
+
+        @include responsive(portrait-tab){
+            left: 4rem; 
+        }
     }
     &__logo{
         font-style: oblique;

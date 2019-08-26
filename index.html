@@ -21,17 +21,313 @@
 </head>
 
 <body>
-    <html-import data-src="html-components/navigation.html"></html-import>
-    <html-import data-src="html-components/header.html"></html-import>
-    <html-import data-src="html-components/intro.html"></html-import>
-    <html-import data-src="html-components/features.html"></html-import>
-    <html-import data-src="html-components/tours.html"></html-import>
-    <html-import data-src="html-components/booking.html"></html-import>
-    <html-import data-src="html-components/popup.html"></html-import>
-    <html-import data-src="html-components/footer.html"></html-import>
-    
-    
-    <script src="import-html.js"></script>
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
+        <label for="nav-toggle" class="navigation__button">
+            <span class="navigation__icon"></span>
+        </label>
+
+        <div class="navigation__background"></div>
+
+        <nav class="navigation__body">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="" class="navigation__link">About Us</a></li>
+                <li class="navigation__item"><a href="" class="navigation__link">Tours</a></li>
+                <li class="navigation__item"><a href="" class="navigation__link">Stories</a></li>
+                <li class="navigation__item"><a href="" class="navigation__link">Book a Tour</a></li>
+                <li class="navigation__item"><a href="" class="navigation__link">FAQs</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <header class="header">
+        <div class="header__logo-box">
+            <p class="header__logo">Wanderer</p>
+        </div>
+        <div class="header__heading-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">Adventures</span>
+                <span class="heading-primary--tagline">to spice up life's essence</span>
+            </h1>
+            <a href="#" class="btn btn--white btn--animated">discover our tours</a>
+        </div>
+    </header>
+
+
+    <section class="intro-section">
+        <div class="u-center-text u-margin-bottom-big">
+            <h2 class="heading-secondary">Exiciting tours around the world on a budget</h2>
+        </div>
+        <div class="row">
+            <div class="col-1-of-2">
+                <h3 class="heading-tertiary u-margin-bottom-small">Experience the world beyond your reach with one
+                    click</h3>
+                <p class="paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi blanditiis eaque,
+                    explicabo sapiente repellendus natus, voluptate doloribus vitae ducimus accusantium alias
+                    consequatur obcaecati.
+                    Ab eligendi distinctio nemo repudiandae perspiciatis amet!
+                </p>
+                <h3 class="heading-tertiary u-margin-bottom-small ">Travel carefree, leave the details to us</h3>
+                <p class="paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi blanditiis eaque,
+                    explicabo sapiente repellendus natus, voluptate doloribus vitae ducimus accusantium alias
+                    consequatur obcaecati.
+                    Ab eligendi distinctio nemo repudiandae perspiciatis amet!
+                </p>
+                <a href="#" class="btn-text">Learn More &rarr;</a>
+            </div>
+            <div class="col-1-of-2">
+                <div class="fancy-gallery">
+                    <img src="media/images/sunset-on-island.jpg" alt="Photo of a beautiful sunset on an island"
+                        class="fancy-gallery__photo fancy-gallery__photo--one">
+                    <img src="media/images/white-buildings-city.jpg" alt="Photo of a city with white buildings"
+                        class="fancy-gallery__photo fancy-gallery__photo--two">
+                    <img src="media/images/great-walls-of-china.jpg" alt="Photo of the great walls of china"
+                        class="fancy-gallery__photo fancy-gallery__photo--three">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="row">
+            <div class="col-1-of-4">
+                <div class="feature-box">
+                    <span class="feature-box__icon iconworks" data-icon="&#60;"></span>
+                    <h3 class="heading-tertiary  u-margin-bottom-small">Explore the world</h3>
+                    <p class="feature-box__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
+                </div>
+            </div>
+            <div class="col-1-of-4">
+                <div class="feature-box">
+                    <span class="feature-box__icon iconworks" data-icon="&#201;"></span>
+                    <h3 class="heading-tertiary  u-margin-bottom-small">create great memories</h3>
+                    <p class="feature-box__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
+                </div>
+            </div>
+            <div class="col-1-of-4">
+                <div class="feature-box">
+                    <span class="feature-box__icon iconworks" data-icon="&#35;"></span>
+                    <h3 class="heading-tertiary  u-margin-bottom-small">Travel on your budget</h3>
+                    <p class="feature-box__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
+                </div>
+            </div>
+            <div class="col-1-of-4">
+                <div class="feature-box">
+                    <span class="feature-box__icon iconworks" data-icon="&#213;"></span>
+                    <h3 class="heading-tertiary  u-margin-bottom-small">Travel Stress Free</h3>
+                    <p class="feature-box__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="tours-section" id="tours-section">
+        <div class="u-center-text u-margin-bottom-big">
+            <h2 class="heading-secondary">our Most Popular Tours</h2>
+        </div>
+        <div class="row">
+            <div class="col-1-of-3">
+                <div class="tour-card">
+                    <div class="tour-card__side tour-card__side--front">
+                        <div class="tour-card__picture tour-card__picture--1"></div>
+                        <h4 class="tour-card__heading">
+                            <span class="tour-card__heading-span tour-card__heading-span--1 ">Dubai
+                                unfiltered</span>
+                        </h4>
+                        <div class="tour-card__details">
+                            <ul>
+                                <li>6 Days, 7 nights</li>
+                                <li>Up to 20 people</li>
+                                <li>2 tour guides</li>
+                                <li>Accommodation at Avenue Hotel</li>
+                                <li>Tour Photography</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tour-card__side tour-card__side--back tour-card__side--back--1">
+                        <div class="tour-card__cta">
+                            <div class="tour-card__price">
+                                <div class="tour-card__price-only">Only</div>
+                                <div class="tour-card__price-value">N 550,000</div>
+                            </div>
+                            <a href="#popup" class="btn btn--white">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1-of-3">
+                <div class="tour-card">
+                    <div class="tour-card__side tour-card__side--front">
+                        <div class="tour-card__picture tour-card__picture--2"></div>
+                        <h4 class="tour-card__heading">
+                            <span class="tour-card__heading-span tour-card__heading-span--2 ">Escape to kenya</span>
+                        </h4>
+                        <div class="tour-card__details">
+                            <ul>
+                                <li>6 Days, 7 nights</li>
+                                <li>Up to 20 people</li>
+                                <li>2 tour guides</li>
+                                <li>Accommodation at Avenue Hotel</li>
+                                <li>Tour Photography</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tour-card__side tour-card__side--back tour-card__side--back--2">
+                        <div class="tour-card__cta">
+                            <div class="tour-card__price">
+                                <div class="tour-card__price-only">Only</div>
+                                <div class="tour-card__price-value">N 300,000</div>
+                            </div>
+                            <a href="#popup" class="btn btn--white">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1-of-3">
+                <div class="tour-card">
+                    <div class="tour-card__side tour-card__side--front">
+                        <div class="tour-card__picture tour-card__picture--3"></div>
+                        <h4 class="tour-card__heading">
+                            <span class="tour-card__heading-span tour-card__heading-span--3 ">paradise in Mauritus
+                            </span>
+                        </h4>
+                        <div class="tour-card__details">
+                            <ul>
+                                <li>6 Days, 7 nights</li>
+                                <li>Up to 20 people</li>
+                                <li>2 tour guides</li>
+                                <li>Accommodation at Avenue Hotel</li>
+                                <li>Tour Photography</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tour-card__side tour-card__side--back tour-card__side--back--3">
+                        <div class="tour-card__cta">
+                            <div class="tour-card__price">
+                                <div class="tour-card__price-only">Only</div>
+                                <div class="tour-card__price-value">N 1,000,000</div>
+                            </div>
+                            <a href="#popup" class="btn btn--white">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="u-center-text u-margin-top-huge">
+            <a class="btn btn--purple" href="#">discover all tours</a>
+        </div>
+    </section>
+
+    <section class="booking-section">
+        <div class="row">
+            <div class="booking">
+                <div class="booking__form">
+                    <form action="" class="form">
+                        <div class="u-center-text u-margin-bottom-small">
+                            <h2 class="heading-secondary">Book A Trip now</h2>
+                        </div>
+                        <div class="form__group u-margin-bottom-small">
+                            <input type="text" class="form__input" id="name" placeholder="Full Name" required>
+                            <label for="name" class="form__label"> Full Name</label>
+                        </div>
+                        <div class="form__group u-margin-bottom-small">
+                            <input type="email" class="form__input" id="name" placeholder="Email" required>
+                            <label for="name" class="form__label"> Email</label>
+                        </div>
+                        <div class="form__group u-margin-bottom-small">
+                            <div class="form__radio-group">
+                                <input type="radio" id="personal" class="form__radio-input" name="travel-size">
+                                <label for="personal" class="form__radio-label">
+                                    <span class="form__radio-button"></span>
+                                    Personal Travel
+                                </label>
+                            </div>
+                            <div class="form__radio-group">
+                                <input type="radio" id="group" class="form__radio-input" name="travel-size">
+                                <label for="group" class="form__radio-label">
+                                    <span class="form__radio-button"></span>
+                                    Group Travel
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form__group u-margin-bottom-small u-margin-top-small">
+                            <button class="btn btn--purple">Next Step &rarr;</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <div class="popup__left">
+                <img src="media/images/kenya-tour.jpg" alt="" class="popup__img">
+                <img src="media/images/dubai-tour.jpg" alt="" class="popup__img">
+            </div>
+            <div class="popup__right">
+                <a href="#tours-section" class="popup__close">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-small u-margin-top-small">Start booking now</h2>
+                <h3 class="heading-tertiary u-margin-bottom-small">Important : Here are somethings you should know</h3>
+                <p class="popup__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi blanditiis eaque,
+                    explicabo sapiente repellendus natus, voluptate doloribus vitae ducimus accusantium alias
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi blanditiis eaque,
+                    explicabo sapiente repellendus n./Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Excepturi blanditiis eaque,
+                    explicabo sapiente repellendus natus, voluptate doloribus vitae ducimus accusantium alias
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi blanditiis eaque,
+                    explicabo sapiente repellendus n./
+                </p>
+                <a href="#" class="btn btn--purple u-margin-top-small u-margin-bottom-small">Book Now</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__logo-box">
+            <p class="logo">Wanderer</p>
+        </div>
+        <div class="row">
+            <div class="col-1-of-2">
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="" class="footer__link">Company</a></li>
+                        <li class="footer__item"><a href="" class="footer__link">Contact</a></li>
+                        <li class="footer__item"><a href="" class="footer__link">Carrers</a></li>
+                        <li class="footer__item"><a href="" class="footer__link">Privacy</a></li>
+                        <li class="footer__item"><a href="" class="footer__link">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-1-of-2">
+                <p class="footer__copyright">
+                    Built by <span class="u-text-uppercase">Linda Ikechukwu </span><a href="#"
+                        class="footer__link"></a>.
+                    Linda Ikechukwu is a self taught Nigerian <span class="u-text-uppercase">Frontend Developer</span>
+                    and Ecommerce enthusiast.
+                    Design Inspiration from Jonas Schmedtmann for his Advanced CSS Course.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
 </body>
 
 </html>

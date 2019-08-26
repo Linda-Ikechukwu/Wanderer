@@ -9,6 +9,20 @@ html{
     //This defines what 1rem should be..
     font-size: 62.55%;
     max-width: 100vw;
+
+    //media queries for font size adaptation
+    @include responsive(big-desktop) {
+        font-size: 75%; //1rem = 12px
+    }
+    @include responsive(landscape-tab) {
+        font-size: 56.25%; //1rem = 9px
+    }
+    @include responsive(portrait-tab) {
+        font-size: 50%; // 1rem = 8px
+    }
+    @include responsive(phone) {
+        font-size: 50%;
+    }
 }
 body{
     box-sizing: border-box;

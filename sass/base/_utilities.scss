@@ -3,6 +3,10 @@
 }
 .u-margin-bottom-big{
     margin-bottom: 8rem !important;
+
+    @include responsive(portrait-tab) {
+        margin-bottom: 5rem !important;
+    }
 }
 .u-margin-bottom-meduim{
     margin-bottom: 3rem !important;
@@ -12,9 +16,17 @@
 }
 .u-margin-top-huge{
     margin-bottom: 10rem !important;
+
+    @include responsive(portrait-tab) {
+        margin-bottom: 8rem !important;
+    }
 }
 .u-margin-top-small{
-    margin-top: 3rem !important;
+    margin-top: 1.5rem !important;
+
+    @include responsive(portrait-tab) {
+        margin-top: 2rem !important;
+    }
 }
 .u-text-uppercase{
     text-transform: uppercase;

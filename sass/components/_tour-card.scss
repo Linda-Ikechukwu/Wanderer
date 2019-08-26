@@ -153,4 +153,63 @@
     }
 
 
+    
+    @include responsive(portrait-tab) {
+        height: auto;
+        background-color: $color-white;
+        border-radius: 3px;
+        box-shadow:$box-shadow-1;
+
+        &__side{
+            height: auto;
+            position:relative;
+            box-shadow: none;
+    
+            &--back{
+                transform: rotateY(0deg);
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+            }
+            
+        }
+    
+        &:hover &__side--front{
+            transform: rotateY(0deg);
+        }
+    
+        &:hover &__side--back{
+            transform: rotateY(0);
+        }
+    
+        //Back card side childern styling
+        &__cta{
+            position:relative;
+            top:17rem;
+            width: 100%;
+            height: 25rem;
+    
+        }
+        &__price{
+            margin-bottom: 1.5rem;
+    
+            &-only{
+                font-size: 1.4rem;
+            
+            }
+            &-value{
+                font-size: 3rem;
+            }
+        
+            
+        }  
+        
+        &__details{
+            padding: 1rem;
+        }
+        
+    
+    }
+
+            
+    
+
 }

@@ -1,11 +1,22 @@
 .row{
     max-width: $grid-width;
     margin: 0 auto;
+
+    @include responsive(portrait-tab){
+        max-width: 50rem;
+    }
+    @include responsive(portrait-tab){
+        max-width: 40rem;
+    }
     
     @include clearfix;
     
     &:not(:last-child){
         margin-bottom: $gutter-vertical;
+
+        @include responsive(portrait-tab) {
+            margin-bottom: $gutter-vertical-small;
+        }
     }
     
     [class^="col-"]{
@@ -13,7 +24,18 @@
         
         &:not(:last-child){
             margin-right: $gutter-horizontal;
+
+            @include responsive(portrait-tab){
+                margin-right: 0;
+                margin-bottom: $gutter-vertical-small;
+            }
         }
+        
+        @include responsive(portrait-tab) {
+            width: 100% !important; 
+            
+        }
+        
     }
     .col-1-of-2{
         width: calc((100% - #{$gutter-horizontal}) / 2);

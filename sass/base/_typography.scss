@@ -4,6 +4,10 @@ body{
     line-height: 1.7;
     color: $text-color-grey-1;
     padding: 2rem;
+
+    @include responsive(portrait-tab) {
+        padding: 0;
+    }
 }
 .heading-primary{
     color: $color-white;
@@ -14,8 +18,13 @@ body{
         display: block;
         font-size: 5rem;
         font-weight: 400;
-        letter-spacing: 2rem;
+        letter-spacing: 2.4rem;
         animation: moveInLeft 3s ease-out;
+
+        @include responsive(phone) {
+            letter-spacing: 1rem;
+            font-size: 4rem;
+        }
     }
     &--tagline{
         display: block;
@@ -26,6 +35,11 @@ body{
         letter-spacing: 1rem;
         animation: moveInRight 3s ease-out;
         margin-bottom: 6rem;
+        text-align: center;
+
+        @include responsive(phone) {
+            letter-spacing: 5px;
+        }
     }
 }
 
@@ -39,6 +53,14 @@ body{
     -webkit-background-clip: text;
     color: transparent;
     letter-spacing: 2px;
+    padding: 0 5px;
+
+    @include responsive(landscape-tab) {
+        padding-top: 2rem;
+    }
+    @include responsive(phone) {
+        font-size: 2rem;
+    }
 }
 .heading-tertiary{
     font-size: $default-font-size;
